@@ -1,125 +1,125 @@
-document.addEventListener('DOMContentLoaded', function() {
+    Document.addEventListener('DOMContentLoaded', function() {
     // Данные о товарах (мок-данные)
     const productsData = [
         {
             id: 1,
             name: "Двигатель V8",
             category: "cars",
-            description: "Мощный двигатель для легковых автомобилей",
+            description: "Мощный двигатель для легковых автомобилей. Подходит для моделей BMW, Mercedes, Audi.",
             price: 150000,
-            image: "https://avatars.mds.yandex.net/i?id=cdd3d2d9fc508331737afdb65988fbce_l-5220604-images-thumbs&n=13"
+            image: "https://images.unsplash.com/photo-1598301251856-2397e5f319f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 2,
             name: "Двигатель для трактора",
             category: "tractors",
-            description: "Надежный двигатель для сельскохозяйственной техники",
+            description: "Надежный двигатель для сельскохозяйственной техники. МТЗ, ЮМЗ, Т-40.",
             price: 250000,
-            image: "https://avatars.mds.yandex.net/i?id=87bc4bde482e45ffbf92c0b09e5990ed_sr-5163701-images-thumbs&n=13"
+            image: "https://images.unsplash.com/photo-1605733513597-0e43e6c4a195?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 3,
             name: "Мотоциклетный двигатель",
             category: "motorcycles",
-            description: "Компактный и мощный двигатель для мотоциклов",
+            description: "Компактный и мощный двигатель для мотоциклов. Honda, Yamaha, Suzuki.",
             price: 95000,
-            image: "https://avatars.mds.yandex.net/i?id=ad4388f6c42a22eb5a9af48c0c5659f6_l-10506067-images-thumbs&n=13"
+            image: "https://images.unsplash.com/photo-1558980052-74f9c5cc5b79?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 4,
             name: "Тормозные колодки",
             category: "cars",
-            description: "Высококачественные тормозные колодки",
+            description: "Высококачественные тормозные колодки для легковых автомобилей. Гарантия 2 года.",
             price: 2500,
-            image: "https://avatars.mds.yandex.net/get-mpic/5222546/img_id8977762501725238346.jpeg/orig"
+            image: "https://images.unsplash.com/photo-1598301251856-2397e5f319f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 5,
             name: "Масляный фильтр",
             category: "cars",
-            description: "Фильтр для очистки моторного масла",
+            description: "Фильтр для очистки моторного масла. Подходит для большинства моделей авто.",
             price: 850,
-            image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Масляный+фильтр"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 6,
             name: "Свечи зажигания",
             category: "cars",
-            description: "Свечи для надежного зажигания",
+            description: "Свечи для надежного зажигания. Совместимы с бензиновыми двигателями.",
             price: 1200,
-            image: "https://placehold.co/300x200/059669/FFFFFF?text=Свечи+зажигания"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 7,
             name: "Фильтр воздушный",
             category: "cars",
-            description: "Фильтр для очистки воздуха",
+            description: "Фильтр для очистки воздуха. Повышает эффективность двигателя.",
             price: 1800,
-            image: "https://placehold.co/300x200/EF4444/FFFFFF?text=Воздушный+фильтр"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 8,
             name: "Амортизатор передний",
             category: "cars",
-            description: "Передний амортизатор для комфортной езды",
+            description: "Передний амортизатор для комфортной езды. Подходит для большинства моделей.",
             price: 4500,
-            image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Амортизатор"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 9,
             name: "Цепь ГРМ",
             category: "cars",
-            description: "Высококачественная цепь ГРМ",
+            description: "Высококачественная цепь ГРМ. Надежная и долговечная.",
             price: 3200,
-            image: "https://placehold.co/300x200/059669/FFFFFF?text=Цепь+ГРМ"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 10,
             name: "Шины летние",
             category: "cars",
-            description: "Летние шины для всех типов дорог",
+            description: "Летние шины для всех типов дорог. Отличное сцепление и долговечность.",
             price: 8500,
-            image: "https://placehold.co/300x200/1F2937/FFFFFF?text=Летние+шины"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 11,
             name: "Аккумулятор",
             category: "cars",
-            description: "Высокомощный автомобильный аккумулятор",
+            description: "Высокомощный автомобильный аккумулятор. Гарантия 3 года.",
             price: 6800,
-            image: "https://placehold.co/300x200/DC2626/FFFFFF?text=Аккумулятор"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 12,
             name: "Масло моторное",
             category: "cars",
-            description: "Синтетическое моторное масло",
+            description: "Синтетическое моторное масло. Защита двигателя в любых условиях.",
             price: 1500,
-            image: "https://placehold.co/300x200/6B7280/FFFFFF?text=Моторное+масло"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 13,
             name: "Радиатор охлаждения",
             category: "cars",
-            description: "Радиатор для эффективного охлаждения",
+            description: "Радиатор для эффективного охлаждения двигателя. Алюминиевый корпус.",
             price: 5200,
-            image: "https://placehold.co/300x200/0EA5E9/FFFFFF?text=Радиатор"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 14,
             name: "Тормозные диски",
             category: "cars",
-            description: "Высококачественные тормозные диски",
+            description: "Высококачественные тормозные диски. Сталь высокой прочности.",
             price: 3800,
-            image: "https://placehold.co/300x200/7C3AED/FFFFFF?text=Тормозные+диски"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         },
         {
             id: 15,
             name: "Помпа",
             category: "cars",
-            description: "Насос охлаждающей жидкости",
+            description: "Насос охлаждающей жидкости. Надежная работа в любых условиях.",
             price: 2900,
-            image: "https://placehold.co/300x200/F59E0B/FFFFFF?text=Помпа"
+            image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
         }
     ];
 
@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const noResults = document.getElementById('no-results');
     const resultsTitle = document.getElementById('results-title');
     const resultsCount = document.getElementById('results-count');
+    const resetFiltersBtn = document.getElementById('reset-filters');
 
     // Состояние фильтров
     let selectedCategory = 'all';
@@ -140,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Инициализация
     renderProducts(productsData);
     setupEventListeners();
+    initScrollAnimations();
 
     // Настройка обработчиков событий
     function setupEventListeners() {
@@ -151,6 +153,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Выбор категории
         document.querySelectorAll('.dropdown-item').forEach(item => {
             item.addEventListener('click', function() {
+                // Убираем активный класс у всех элементов
+                document.querySelectorAll('.dropdown-item').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Добавляем активный класс к выбранному
+                this.classList.add('active');
+                
                 selectedCategory = this.dataset.value;
                 categoryToggle.textContent = this.textContent;
                 categoryMenu.style.display = 'none';
@@ -171,6 +181,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 applyFilters();
             }
         });
+
+        // Сброс фильтров
+        if (resetFiltersBtn) {
+            resetFiltersBtn.addEventListener('click', function() {
+                searchInput.value = '';
+                searchQuery = '';
+                
+                // Сбрасываем категорию на "Все типы"
+                document.querySelectorAll('.dropdown-item').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.querySelector('.dropdown-item[data-value="all"]').classList.add('active');
+                selectedCategory = 'all';
+                categoryToggle.textContent = 'Все типы';
+                
+                // Показываем все товары
+                renderProducts(productsData);
+                updateResultsHeader('', 'all', productsData.length);
+            });
+        }
 
         // Закрытие меню при клике вне его
         document.addEventListener('click', function(e) {
@@ -253,6 +283,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
             
+            // Добавляем обработчик для кнопки "Купить"
+            productCard.querySelector('.buy-btn').addEventListener('click', function() {
+                showNotification(`Товар "${product.name}" добавлен в корзину!`);
+            });
+            
             productsGrid.appendChild(productCard);
         });
     }
@@ -271,5 +306,147 @@ document.addEventListener('DOMContentLoaded', function() {
     // Форматирование цены
     function formatPrice(price) {
         return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';
+    }
+
+    // Показ уведомления
+    function showNotification(message) {
+        // Создаем элемент уведомления
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.innerHTML = `
+            <div class="notification-content">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>${message}</span>
+            </div>
+        `;
+        
+        // Добавляем в DOM
+        document.body.appendChild(notification);
+        
+        // Показываем
+        setTimeout(() => {
+            notification.style.opacity = '1';
+            notification.style.transform = 'translateY(0)';
+        }, 10);
+        
+        // Удаляем через 3 секунды
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            notification.style.transform = 'translateY(-20px)';
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 3000);
+        
+        // Добавляем стили для уведомления
+        const style = document.createElement('style');
+        style.textContent = `
+            .notification {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 10000;
+                opacity: 0;
+                transform: translateY(-20px);
+                transition: all 0.3s ease;
+            }
+            
+            .notification-content {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                background: white;
+                color: #212529;
+                padding: 16px 28px;
+                border-radius: 50px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+                font-weight: 600;
+                font-size: 1.05rem;
+            }
+            
+            .notification-content svg {
+                color: #4CAF50;
+                width: 22px;
+                height: 22px;
+                flex-shrink: 0;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    // Инициализация анимаций при прокрутке
+    function initScrollAnimations() {
+        // Анимация для карточек описания
+        const descriptionCards = document.querySelectorAll('.description-card');
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        descriptionCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `opacity 0.5s ease, transform 0.5s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+        
+        // Анимация для карточек товаров
+        const productCards = document.querySelectorAll('.product-card');
+        productCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease, transform 0.6s ease ${0.2 + index * 0.05}s`;
+        });
+        
+        const productObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    productObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05
+        });
+        
+        productCards.forEach(card => {
+            productObserver.observe(card);
+        });
+        
+        // Анимация для отзывов
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        testimonialCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateX(30px)';
+            card.style.transition = `opacity 0.5s ease, transform 0.5s ease ${index * 0.1}s`;
+        });
+        
+        const testimonialObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                    testimonialObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        testimonialCards.forEach(card => {
+            testimonialObserver.observe(card);
+        });
     }
 });
