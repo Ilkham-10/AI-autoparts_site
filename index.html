@@ -8,6 +8,122 @@
 </head>
 <body>
     <header class="header">
+
+<button class="profile-button" id="profile-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+    </svg>
+</button>
+
+<!-- Модальное окно регистрации -->
+<div class="profile-modal" id="profile-modal">
+    <div class="profile-modal-overlay" id="profile-overlay"></div>
+    <div class="profile-modal-content">
+        <div class="profile-header">
+            <h2>Создайте аккаунт</h2>
+            <button class="close-profile" id="close-profile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="profile-form-container">
+            <form id="registration-form">
+                <div class="form-group">
+                    <input type="text" id="first-name" placeholder="Имя" required>
+                    <div class="form-error" id="first-name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" id="last-name" placeholder="Фамилия" required>
+                    <div class="form-error" id="last-name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <div class="form-error" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Номер телефона" required>
+                    <div class="form-error" id="phone-error"></div>
+                </div>
+                
+                <button type="submit" class="register-btn">Зарегистрироваться</button>
+                <p class="login-hint">Уже есть аккаунт? <a href="#" id="login-switch">Войдите</a></p>
+            </form>
+        </div>
+        
+        <div class="profile-footer">
+            <p>Регистрируясь, вы соглашаетесь с <a href="#">правилами сайта</a> и <a href="#">политикой конфиденциальности</a></p>
+        </div>
+    </div>
+</div>
+
+
+<section class="basket">
+                            <!-- Добавьте эту кнопку в хедер справа от поисковой панели -->
+<button class="cart-button" id="cart-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+    <span class="cart-count">0</span>
+    <span class="cart-total">0 ₽</span>
+</button>
+
+<!-- Модальное окно корзины -->
+<div class="cart-modal" id="cart-modal">
+    <div class="cart-modal-overlay" id="cart-overlay"></div>
+    <div class="cart-modal-content">
+        <div class="cart-header">
+            <h2>Ваша корзина</h2>
+            <button class="close-cart" id="close-cart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="cart-items-container" id="cart-items-container">
+            <div class="empty-cart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M12 13a4 4 0 00-4 4v2a4 4 0 008 0v-2a4 4 0 00-4-4z"></path>
+                </svg>
+                <p>Ваша корзина пуста</p>
+                <button class="continue-shopping">Продолжить покупки</button>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Товары:</span>
+                    <span id="cart-items-count">0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Доставка:</span>
+                    <span>Бесплатно</span>
+                </div>
+                <div class="summary-total">
+                    <span>Итого:</span>
+                    <span id="cart-total-amount">0 ₽</span>
+                </div>
+            </div>
+            <button class="checkout-btn" id="checkout-btn" disabled>
+                <span>Оформить заказ</span>
+                <span id="checkout-total">0 ₽</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+</section>
+
         <div class="container">
             <div class="header-content">
                 <h1 class="logo">Автозапчасти</h1>
